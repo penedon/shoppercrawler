@@ -1,0 +1,76 @@
+{
+    "websites": {
+        "shopper": {
+            "session_url": "https://programada.shopper.com.br/shop/#bemvindo",
+            "session_key_name": "email",
+            "session_password_name": "senha",
+            "sumbmit_xpath": "//button[@type='submit' and contains(., 'Entrar')]",
+            "signin_form_xpath": "//a[contains(@class, 'login')]",
+            "bot_trapped_class": null,
+            "extractors": {
+                "assortment": {
+                    "title_xpath": "//title" 
+                }
+            }
+        }
+    },
+    "settings": {
+        "wait_time": {
+            "short_wait_time": 0.1,
+            "short_careful_wait_time": 0.3,
+            "medium_wait_time": 0.5,
+            "long_wait_time": 1,
+            "careful_wait_time": 3,
+            "safe_wait_time": 5
+        }
+    },
+    "models": {
+        "assortment": {
+            "path": "../data/storage/assortment.csv",
+            "columns": [
+                "name",
+                "sku",
+                "department",
+                "category",
+                "url",
+                "image",
+                "price_to",
+                "discount",
+                "available",
+                "stock_qty",
+                "store",
+                "created_at",
+                "hour"
+            ]
+        },
+        "sellers": {
+            "path": "../data/storage/sellers.csv",
+            "columns": [
+                "name",
+                "sku",
+                "department",
+                "category",
+                "seller_store",
+                "seller_player",
+                "price_store",
+                "price_player",
+                "discount_store",
+                "available",
+                "stock_qty",
+                "url",
+                "image",
+                "created_at",
+                "hour"
+            ]
+        }
+    },
+    "filters": {
+        "shopper": {
+            "sellers": [
+                {"name": "Extra", "url": "https://d2om08pcbtz1n1.cloudfront.net/media/mercados/supermercados_1434573567_Nz0N8kcVQn1572z0DZLhLd8VhmkFS6.png"},
+                {"name": "Pão de Açúcar", "url": "https://d2om08pcbtz1n1.cloudfront.net/media/mercados/supermercados_1438477076_J2F57cSBn5wV9jjUJ7I9EZXX1gM2m6.jpg"},
+                {"name": "Sonda Supermercados", "url": "https://d2om08pcbtz1n1.cloudfront.net/media/mercados/supermercados_1458250868_TS7N1fZCCWs11L31Ge31cpGtR9tJ0r.png"}
+            ]
+        }
+    }
+}
